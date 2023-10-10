@@ -26,3 +26,15 @@ def tri(n):
             sum += 1
     print(sum)
 tri(6)
+
+def pale(n):
+    count = 0
+    if n == reversed(n):
+        return True
+    else:
+        for i in range(len(n)):
+            if n[i] != n[len(n) - i - 1]:
+                count += 1
+        if count == 2: return True
+        else: return False
+print(pale('243212'))
