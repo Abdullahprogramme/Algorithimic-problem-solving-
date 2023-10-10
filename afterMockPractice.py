@@ -38,3 +38,17 @@ def pale(n):
         if count == 2: return True
         else: return False
 print(pale('243212'))
+
+flag = False
+s= "pizza"
+t ="olive"
+for i in range(len(t)):
+    if s[i] == t[i]:
+        print("yes")
+        flag = True
+    else:
+        if i != len(s) - 1:
+            if ( s[i] == s[i+1]) and ( t[i] != t[i+1]):
+                print("Yes")
+                flag = True
+if flag is False: print("No")
