@@ -42,18 +42,68 @@ def Diamond(N):
     Diamond_RightTri(4)
     Diamond_Reverse_RightTri(4)
 
+def Factorial(n):
+    if n == 0 or n == 1: return 1
+    else: return n * Factorial(n - 1)
+
 def binary_search(lst, start, end, val):
     mid = (start + end) // 2
     if lst[mid] == val: return mid
     elif lst[mid] > val: return binary_search(lst, start, mid - 1, val)
     elif lst[mid] < val: return binary_search(lst, mid + 1, end, val)
 
+def GCD(a, b):
+    if b == 0: return a
+    else: return GCD(b ,a % b)
+
+def Palindrome(N):
+    if len(N) <= 1:
+        return True
+    elif N[0] == N[-1]:
+        return Palindrome(N[1:-1])
+    else: return False
+
+def Reverse(N):
+    if len(N) <= 1:
+        return N
+    else: return N[-1] + Reverse(N[:- 1])
+
+def Sum_of_Natural_Nums(N):
+    if N == 1: return 1
+    else: return N + Sum_of_Natural_Nums(N - 1)
+
+def Count_digits(N):
+    if N < 10:
+        return 1
+    else: 
+        return 1 + Count_digits(N // 10)
+
 def main():
+    # flag = True
+    # start = temp = 0
+    # s = 'axc'
+    # t = 'ahbgdc'
+    # if (len(s) >= len(t) and (len(s) != 0 or len(t) != 0)) or len(t) == 0 and len(s) != 0: flag = False
+    # while flag is True and temp != len(s):
+    #     i = s[temp]
+    #     temp += 1
+    #     start = t.find(i, start, len(t))
+    #     if start == -1:
+    #         flag = False
+    #         break
+    #     start += 1
+    # print(flag)
     Rec_hat(4)
     multiplication_Table(5, 10)
     Triangle(4)
     Diamond(4)
     print("Found at: ", binary_search([1,2,3,4,5,6,7,8,9,10], 0, 9, 3))
+    print(Factorial(4))
+    print(GCD(3,9))
+    print(Palindrome("RacecaR"))
+    print(Reverse("Abdullah"))
+    print(Sum_of_Natural_Nums(6))
+    print(Count_digits(123456))
     
 if __name__ == "__main__":
     main()
