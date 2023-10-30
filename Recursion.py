@@ -78,6 +78,27 @@ def Count_digits(N):
     else: 
         return 1 + Count_digits(N // 10)
 
+def Fibonacci(N):
+    if N <= 1: return N
+    else: return Fibonacci(N - 1) + Fibonacci(N - 2)
+
+def Sum_Of_Digits(N):
+    if N < 1: return 0
+    else: return N % 10 + Sum_Of_Digits(N // 10)
+
+def PowerCal(base, exponent):
+    if exponent < 1: return 1
+    else: return base * PowerCal(base, exponent - 1)
+
+def hanoi(n, source, auxiliary, target):
+    if n == 1:
+        print("Move disk 1 from", source, "to", target)
+    else:
+        hanoi(n-1, source, target, auxiliary)
+        print("Move disk", n, "from", source, "to", target)
+        hanoi(n-1, auxiliary, source, target)
+
+
 def main():
     # flag = True
     # start = temp = 0
@@ -104,6 +125,10 @@ def main():
     print(Reverse("Abdullah"))
     print(Sum_of_Natural_Nums(6))
     print(Count_digits(123456))
+    print(Fibonacci(6))
+    print(Sum_Of_Digits(123))
+    print(PowerCal(3, 2))
+    hanoi(3, 1, 2, 3)
     
 if __name__ == "__main__":
     main()
