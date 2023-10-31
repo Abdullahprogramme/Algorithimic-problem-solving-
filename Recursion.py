@@ -117,6 +117,9 @@ def Count_Vowels(N):
             return 1 + Count_Vowels(N[:-1])
         else: return Count_Vowels(N[:-1]) # recursive case
 
+def my_find(s, subs, a = 0):
+    if s[:len(subs)] == subs: return a # base case
+    else: return my_find(s[1:], subs, a+1) # recursive case
 
 def main():
     # flag = True
@@ -150,6 +153,7 @@ def main():
     hanoi(3, 1, 2, 3)
     anotherBigHat(4)
     print(Count_Vowels("AbduLLah"))
+    print(my_find('bbbbba', 'a'))
     
 if __name__ == "__main__":
     main()
