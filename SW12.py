@@ -43,4 +43,4 @@ def get_repeatedItems(cart):
             repeated_items.append(cart[item])
     return repeated_items
 
-print(get_repeatedItems(['b','a','b','c''d','a','e']))
+print(get_repeatedItems(['b','a','b','c','d','a','e']))
