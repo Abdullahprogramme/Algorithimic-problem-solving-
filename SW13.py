@@ -25,3 +25,21 @@ def when_and_what(X, N):
                 return i + 1, days[j] 
     return -1   
 print(when_and_what("cake", [["banana", "cake"], ['per', 'sd']]))
+
+def calculateTotalEidi(N):
+    sum = 0
+    for i in N:
+        if type(i) is list:
+            sum += calculateTotalEidi(i)
+        else:
+            sum += i
+    return sum
+print(calculateTotalEidi([500, 100, 750, [ 850, [[200, 200, [[700, 100]], 400]]]]))
+
+def print_nested_list(A):
+    for nested in range(len(A)):
+        for element in range(len(A[nested])):
+            print(A[nested][element], end=" ")
+        print()
+
+print_nested_list([[2,3], [4,5], [5,6,7]])
