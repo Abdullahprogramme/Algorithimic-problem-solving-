@@ -1,6 +1,6 @@
 def Chairs(X,Y):
     if X >= Y: print(X-Y)
-    else: print("0") 
+    else: print(0) 
 
 def MinMoves(x,y,X,Y):
     count = 0
@@ -9,14 +9,9 @@ def MinMoves(x,y,X,Y):
         y += 1
         count += 1
     if x == X:
-        while y != Y:
-            y += 1
-            count += 1
+        count += Y - y
     elif y == Y:
-        while x != X:
-            x += 1
-            count += 1
-    elif x == X  and y == Y: return (count)
+        count += X - x
     return count
 
 def Shoes(N,M):
@@ -25,8 +20,6 @@ def Shoes(N,M):
         while N != M:
             M += 1
             count += 1
-    else:
-        pass
     print(count)
 
 def Pattern(N):
