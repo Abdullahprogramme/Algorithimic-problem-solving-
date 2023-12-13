@@ -1,0 +1,57 @@
+Strings:
+    Basic String Methods:
+        len(s): Returns the length of the string s.
+        s.lower(): Converts all characters in s to lowercase.
+        s.upper(): Converts all characters in s to uppercase.
+        s.capitalize(): Capitalizes the first character of s.
+        s.title(): Returns a titlecased version of s.
+    String Operations:
+        s1 + s2: Concatenates two strings.
+        s * n: Repeats the string s n times.
+    String Testing:
+        s.isalpha(): Returns True if all characters in s are alphabetic.
+        s.isdigit(): Returns True if all characters in s are digits.
+        s.startswith(prefix): Returns True if s starts with the specified prefix.
+        s.endswith(suffix): Returns True if s ends with the specified suffix.
+    String Manipulation:
+        s.strip(): Removes leading and trailing whitespaces.
+        s.replace(old, new): Replaces occurrences of old with new.
+        s.split(sep): Splits the string into a list of substrings using the specified separator.
+Lists:
+    List Manipulation:
+        len(lst): Returns the length of the list lst.
+        lst.append(x): Appends element x to the end of the list.
+        lst.extend(iterable): Extends the list by appending elements from the iterable.
+        lst.insert(i, x): Inserts element x at index i.
+        lst.remove(x): Removes the first occurrence of element x.
+        lst.pop([i]): Removes and returns the element at index i (default is the last element).
+        lst.index(x): Returns the index of the first occurrence of element x.
+        lst.count(x): Returns the number of occurrences of element x.
+    List Sorting:
+        lst.sort(): Sorts the list in ascending order.
+        lst.sort(reverse=True): Sorts the list in descending order.
+        sorted(lst): Returns a new sorted list from the elements of lst.
+Dictionaries:
+    Dictionary Manipulation:
+        len(d): Returns the number of items in the dictionary d.
+        d[key]: Returns the value associated with the key key.
+        d[key] = value: Sets the value associated with the key key.
+        del d[key]: Deletes the item with key key.
+        key in d: Returns True if the key exists in the dictionary.
+    Dictionary Methods:
+        d.keys(): Returns a view of all keys in the dictionary.
+        d.values(): Returns a view of all values in the dictionary.
+        d.items(): Returns a view of all key-value pairs in the dictionary.
+        d.get(key, default): Returns the value for the key key if it exists, else returns default.
+Tuples:
+    Tuple Operations:
+        len(tup): Returns the length of the tuple tup.
+        tup + tup2: Concatenates two tuples.
+        tup * n: Repeats the tuple tup n times.
+    Tuple Methods:
+        tup.index(x): Returns the index of the first occurrence of element x.
+        tup.count(x): Returns the number of occurrences of element x.
+General:
+    type(x): Returns the type of the object x.
+    id(x): Returns the identity of the object x.
+    isinstance(x, type): Returns True if x is an instance of the specified type
