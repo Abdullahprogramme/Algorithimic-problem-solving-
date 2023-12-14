@@ -26,12 +26,16 @@ print(cyclic_shuffle([2,9,4], 7))
 
 def prime_factorization(N):
     lst = []
+    number = 2
     while N > 1:
-        number = 2
-        while N % number != 0:
+        if N % number != 0:
             number += 1
-        lst.append(number)
-        N = N / number
+        else: 
+            lst.append(number)
+        # while N % number != 0:
+        #     number += 1
+        # lst.append(number)
+            N = N / number
     return lst
 
 print(prime_factorization(1430))
@@ -44,3 +48,24 @@ def get_repeatedItems(cart):
     return repeated_items
 
 print(get_repeatedItems(['b','a','b','c','d','a','e']))
+
+s = input()
+def blanks(s):
+    for i in range(len(s)):
+        modified = list(s)
+        modified[i] = "_"
+        new = str.join("", modified)
+        print(f"{s[i]} : {new}")
+blanks(s)
+
+
+li = [1, [1, 2], [ [1, 2], [1, 2] ], 9]
+def re(li):
+    flat = []
+    for i in li:
+        if type(i) is list:
+            flat += re(i)
+        else:
+            flat.append(i)
+    return flat
+print(re(li))
