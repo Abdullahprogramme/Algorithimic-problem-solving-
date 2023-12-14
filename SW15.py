@@ -18,7 +18,8 @@ def pri(string):
     for i in string:
         if (i, string.count(i)) not in lst:
             lst.append((i, string.count(i)))
-    print(lst.sort(key=lambda x:(x[1], x[0])))
+    lst.sort(key=lambda x:(x[1], x[0]))
+    print(lst)
 pri("ewwww")
 
 def order(l):
