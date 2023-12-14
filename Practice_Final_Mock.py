@@ -151,23 +151,23 @@
 #         print(n[:i])
 # echo('ECHO')
 
-# def pyramid(n):
-#     call(0, n)
+def pyramid(n):
+    call(0, n)
     
-# def call(i, n):
-#     for j in range(n):
-#         print(' ' * (n - i - 1) + '* ' * (i+1))
-#         i += 1
-# pyramid(5)
+def call(i, n):
+    for j in range(n):
+        print(' ' * (n - i - 1) + '* ' * (i+1))
+        i += 1
+pyramid(8)
 
-# def pattern(n):
-#     for i in range(n):
-#         for j in range(i + 1):
-#             print(2**j, end="")
-#         for j in range(i - 1, -1, -1):
-#             print(2**j, end="")
-#         print()
-# pattern(3)
+def pattern(n):
+    for i in range(n):
+        for j in range(i + 1):
+            print(2**j, end="")
+        for j in range(i - 1, -1, -1):
+            print(2**j, end="")
+        print()
+pattern(3)
 
 # def stars(n):
 #     caller(0, n)
@@ -220,3 +220,42 @@ def collatz(n):
         result += ', ' + str(n)
     return result
 print(collatz(3))
+
+def last_word(string = 'I am a human'):
+    d = string.rfind(' ')
+    word = string[d + 1: ]
+    print(f"The last word is '{word}' with length {len(word)}")
+last_word()
+
+def tri_sequence(N):
+    j = 0
+    result = ''
+    for i in range(1, N + 1):
+        j += i
+        result += str(j) + ' '
+    return j, result
+print(tri_sequence(4))
+
+def check_prime_sum(N):
+    primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101,
+103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197,
+199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311,
+313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431,
+433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541]
+    for i in range(1, N):
+        prime_1 = primes[i - 1]
+        for j in range(1, N):
+            prime_2 = primes[j - 1]
+            if prime_1 + prime_2 == N: 
+                print(prime_1, prime_2)
+                return
+check_prime_sum(100)
+
+def floyd_tri(N):
+    num = 1
+    for i in range(1, N + 1):
+        for j in range(i):
+            print(num, end=" ")
+            num += 1
+        print()
+floyd_tri(5)
